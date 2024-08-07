@@ -1,6 +1,5 @@
- {
-  "jobs" :
-  [
+{
+  "jobs": [
     {
       "id": "1",
       "title": "Senior React Developer",
@@ -84,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "0477",
+      "title": "fdfdsfdsf",
+      "type": "Internship",
+      "description": "fdsyfdfydf",
+      "salary": "Under $50K",
+      "location": "sdfsafsdf",
+      "company": {
+        "contactEmail": "fdsfd@mail.com",
+        "contactPhone": "dffdfd",
+        "name": "fdfdf",
+        "description": "fdsfdsfdsf"
+      }
     }
   ]
- }
+}

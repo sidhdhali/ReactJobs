@@ -1,10 +1,11 @@
 // import { useEffect, useState } from "react"
-import { useParams, useLoaderData } from "react-router-dom";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom";
 // import Spinners from "../Components/Spinners";
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
-const SingleJobPage = () =>
+const SingleJobPage = ({ deleteJob }) =>
 {
   // const [job, setJob] = useState(null);
   // const [loading, setLoading] = useState(true)
@@ -29,6 +30,20 @@ const SingleJobPage = () =>
   //   }
   //   fetchJob();
   // }, [])
+  const navigate = useNavigate();
+
+  const handleDelete = (jobId) =>
+  {
+    const confirm = window.confirm("Are you sure you want to delete tihs job?");
+
+    if (!confirm) return;
+
+    deleteJob(jobId);
+    toast.success("job is deleted successfully");
+    navigate(`/jobs`);
+
+  }
+
 
   return (
     <>
@@ -109,7 +124,7 @@ const SingleJobPage = () =>
                   to={`/jobs/edit/${job.id}`}
                   className="bg-indigo-500 hover:bg-indigo-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">Edit Job
                 </Link>
-                <button
+                <button onClick={() => handleDelete(job.id)}
                   className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block"
                 >
                   Delete Job
