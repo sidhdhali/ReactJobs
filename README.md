@@ -1,5 +1,8 @@
 # React + Vite
 
+Basic CRUD Operation without (Node js & Express js).. to revise a Front CRUD and basic React developer Jobs List (edit , delete , create , get).
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
